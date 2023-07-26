@@ -27,7 +27,10 @@
   }
 
   &::before {
-    @include center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleY(0);
     content: "";
     width: 100%;
     height: 100%;
@@ -35,6 +38,7 @@
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
+    transition: all 0.5s ease 0.4s;
   }
 
   svg {
@@ -78,6 +82,12 @@
       background-color: $c-purple;
       border-color: $c-purple;
     }
+  }
+}
+
+.page-loaded .social-block__toggler {
+  &:before {
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 
