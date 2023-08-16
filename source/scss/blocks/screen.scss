@@ -1,4 +1,6 @@
 .screen {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -7,7 +9,7 @@
   overflow: hidden;
 
   &--hidden {
-    display: none;
+    visibility: hidden;
   }
 
   @media (max-width: $tablet) and (orientation: portrait) {
@@ -303,6 +305,10 @@
   background-size: cover;
   background-position: center;
 
+  &.screen--hidden {
+    transition: visibility 0s 0.3s;
+  }
+
   @media (orientation: portrait) {
     background-size: auto calc(100vh - 13.8rem), 100% 25rem;
     background-position: top center, bottom center;
@@ -310,7 +316,20 @@
 }
 
 .screen--prizes {
-  background-color: $c-dark;
+  .screen-background {
+    background-color: $c-dark;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .screen--story.screen--hidden ~ & {
+    .screen-background {
+      animation: fadeInUp 0.3s ease;
+    }
+  }
 }
 
 .screen--game {
