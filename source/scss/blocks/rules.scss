@@ -159,6 +159,7 @@
     border-radius: 50%;
     line-height: 5rem;
     text-align: center;
+    transform: scale(0);
 
     @media (max-width: $tablet) and (orientation: portrait) {
       top: 1rem;
@@ -179,6 +180,7 @@
 
   p {
     margin: 0;
+    opacity: 0;
 
     @media (max-width: $tablet) and (orientation: portrait) {
       min-height: calc(1.4rem * 2.2);
@@ -190,6 +192,7 @@
   position: absolute;
   bottom: 6rem;
   right: 5.6rem;
+  visibility: hidden;
 
   @media (min-width: $stop-scaling) {
     bottom: 60px;
@@ -209,5 +212,68 @@
   @media (max-width: $mobile) and (orientation: landscape) {
     bottom: 2rem;
     right: 1.5rem;
+  }
+}
+
+.screen--rules.active {
+  .rules__item {
+
+    &::before {
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-name: zoomIn;
+      animation-timing-function: cubic-bezier(0, 0, 0, 1.3);
+    }
+
+    p {
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-name: fadeInRight;
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(2) {
+      &::before {
+        animation-delay: 0.3s;
+      }
+
+      p {
+        animation-delay: 0.4s;
+      }
+    }
+
+    &:nth-child(3) {
+      &::before {
+        animation-delay: 0.6s;
+      }
+
+      p {
+        animation-delay: 0.7s;
+      }
+    }
+
+    &:nth-child(4) {
+      &::before {
+        animation-delay: 0.9s;
+      }
+
+      p {
+        animation-delay: 1s;
+      }
+    }
+  }
+
+  .rules__link {
+    animation-name: textAppeared;
+    animation-delay: 1.7s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+
+      &.btn::before {
+        animation-name: stretchingRight;
+        animation-delay: 1.4s;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+      }
   }
 }
