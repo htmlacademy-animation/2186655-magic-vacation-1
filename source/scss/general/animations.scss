@@ -27,3 +27,27 @@
     transform: translateY(0);
   }
 }
+
+@keyframes zoomIn {
+  from {transform: scale(0)}
+
+  to {transform: scale(1)}
+}
+
+@keyframes fadeInRight {
+  from {transform: translateX(10%); opacity: 0;}
+
+  to {transform: translateX(0%); opacity: 1;}
+
+}
+
+@keyframes stretchingRight {
+  from {width: 0; visibility: hidden;}
+
+  to {width: 18rem; visibility: visible;}  
+}
+
+@keyframes textAppeared{
+  from {color: transparent; visibility: hidden}
+  to {color: $c-dark; visibility: visible}
+}
