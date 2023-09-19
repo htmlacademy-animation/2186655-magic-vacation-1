@@ -50,7 +50,7 @@
   z-index: 1;
   opacity: 0;
   transform: translateY(2rem);
-  transition: all 0.3s cubic-bezier(0,.8,.96,.89) 0.1s;
+  transition: all $duration-medium cubic-bezier(0,.8,.96,.89) 0.1s;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     width: 3.5rem;
@@ -327,7 +327,7 @@
 
   .screen--story.screen--hidden ~ & {
     .screen-background {
-      animation: fadeInUp 0.3s ease;
+      animation: fadeInUp $duration-medium ease;
     }
   }
 }

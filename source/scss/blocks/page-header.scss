@@ -37,7 +37,7 @@
   color: $c-light;
   opacity: 0;
   transform: translateX(-2rem);
-  transition: all 0.3s cubic-bezier(0,.8,.96,.89) 0.2s;
+  transition: all $duration-medium cubic-bezier(0,.8,.96,.89) 0.2s;
 
   @media (min-width: $stop-scaling) {
     top: -5px;
@@ -85,7 +85,7 @@
   border-radius: 50%;
   z-index: 1;
   transform: scale(0);
-  transition: all 0.5s ease 0.3s;
+  transition: all $duration-extra-long ease 0.3s;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     display: block;
@@ -187,7 +187,7 @@
   line-height: 1.0418;
   color: $c-light;
   opacity: 0;
-  transition: all 0.3s cubic-bezier(0,.8,.96,.89) 0.3s;
+  transition: all $duration-medium cubic-bezier(0,.8,.96,.89) 0.3s;
 
   @media (min-width: $stop-scaling) {
     font-size: 12px;
@@ -252,7 +252,7 @@
     display: block;
     padding: 0 0.5em 0.5em;
     position: relative;
-    transition: color 0.5s;
+    transition: color $duration-extra-long;
 
     &::after {
       background-color: $c-light;
@@ -261,7 +261,7 @@
       height: 2px;
       position: absolute;
       right: 0;
-      transition: width 0.3s ease-in-out;
+      transition: width $duration-medium ease-in-out;
       width: 0;
 
       @media (max-width: $tablet) and (orientation: portrait) {
@@ -282,7 +282,7 @@
         display: block;
         width: 0;
         opacity: 0;
-        transition: all 0.3s cubic-bezier(0,.8,.96,.89) 0.3s;
+        transition: all $duration-medium cubic-bezier(0,.8,.96,.89) 0.3s;
         left: 0;
       }
     }
