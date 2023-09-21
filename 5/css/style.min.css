@@ -1076,7 +1076,7 @@ img {
     transform: translateY(0) rotate(0);
   }
 }
-@keyframes leafBlue1Appear {
+@keyframes leafBlueLeftAppear {
   20% {
     opacity: 1;
     transform: rotate(0);
@@ -1095,7 +1095,7 @@ img {
     transform: rotate(0);
   }
 }
-@keyframes leafBlue2Appear {
+@keyframes leafBlueRightAppear {
   20% {
     opacity: 1;
     transform: rotate(0);
@@ -2849,80 +2849,92 @@ img {
 }
 
 .result__image {
+  position: relative;
+  width: 57.3rem;
+  max-height: 26rem;
+  margin: 0 auto;
+  flex-grow: 1;
+  z-index: -1;
+}
+.result__image-wrapper {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: -1;
+  height: 100%;
+}
+.result__image--leaf_blue_left {
+  position: absolute;
+  left: -10%;
+  bottom: -2%;
+  width: 49%;
+  height: auto;
+  opacity: 0;
+}
+.screen--show .result__image--leaf_blue_left {
+  animation: leafBlueLeftAppear 1s 0.25s ease-out forwards;
+}
+.result__image--leaf_blue_right {
+  position: absolute;
+  right: 1%;
+  bottom: 16%;
+  width: 49%;
+  height: auto;
+  opacity: 0;
+}
+.screen--show .result__image--leaf_blue_right {
+  animation: leafBlueRightAppear 1s 0.25s ease-out forwards;
+}
+.result__image--leaf_green {
+  position: absolute;
+  right: -7%;
+  bottom: 0%;
+  width: 60%;
+  height: auto;
+  opacity: 0;
+}
+.screen--show .result__image--leaf_green {
+  animation: leafBlueRightAppear 1s 0.35s ease-out forwards;
+}
+.result__image--suitcase {
+  position: absolute;
+  right: 26%;
+  bottom: -17%;
+  width: 62%;
+  height: auto;
+  transform: scale(0);
+}
+.screen--show .result__image--suitcase {
+  animation: suitcaseAppear 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+.result__image--flamingo {
+  position: absolute;
+  left: 6%;
+  bottom: -13%;
+  width: 46%;
+  height: auto;
+  opacity: 0;
+}
+.screen--show .result__image--flamingo {
+  animation: flamingoAppear 0.3s ease-out forwards, flamingoAnimation 2s 0.3s ease-in-out infinite alternate;
+}
+@media (min-width: 2000px) {
+  .result__image {
+    max-height: 35rem;
+  }
+  .result__image--leaf_blue_right {
+    bottom: 18%;
+  }
+  .result__image--leaf_green {
+    bottom: 8%;
+  }
 }
 @media (orientation: portrait) {
   .result__image {
-    left: -10rem;
-    right: -10rem;
-    top: 25%;
-    bottom: 25%;
+    width: 90%;
+    margin: 0 10%;
+    max-height: 13rem;
   }
-}
-.result__image .result__image-part {
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  position: absolute;
-}
-.result__image .result__image-part_flamingo {
-  background-size: 22%;
-  background-position: 41% 78%;
-  background-image: url("../../img/module-2/win-suitcase/flamingo.png");
-  opacity: 0;
-  transform: translateY(30rem) rotate(-25deg);
-}
-.screen--show .result__image .result__image-part_flamingo {
-  animation: flamingoAppear 0.3s ease-out forwards, flamingoAnimation 2s 0.3s ease-in-out infinite alternate;
-}
-.result__image .result__image-part_leaf-blue-1 {
-  background-size: 22%;
-  background-position: 63% 56%;
-  background-image: url("../../img/module-2/win-suitcase/leaf-blue-1.png");
-  opacity: 0;
-  transform: rotate(-35deg);
-}
-.screen--show .result__image .result__image-part_leaf-blue-1 {
-  animation: leafBlue1Appear 1s 0.25s ease-out forwards;
-}
-.result__image .result__image-part_leaf-blue-2 {
-  background-size: 22%;
-  background-position: 32% 80%;
-  background-image: url("../../img/module-2/win-suitcase/leaf blue 2.png");
-  opacity: 0;
-  transform: rotate(35deg);
-}
-.screen--show .result__image .result__image-part_leaf-blue-2 {
-  animation: leafBlue2Appear 1s 0.25s ease-out forwards;
-}
-.result__image .result__image-part_leaf-green {
-  background-size: 24%;
-  background-position: 71% 70%;
-  background-image: url("../../img/module-2/win-suitcase/leaf green.png");
-  opacity: 0;
-  transform: rotate(-30deg);
-}
-.screen--show .result__image .result__image-part_leaf-green {
-  animation: leafBlue1Appear 1s 0.35s ease-out forwards;
-}
-.result__image .result__image-part_suitcase {
-  background-size: 30%;
-  background-position: center 75%;
-  background-image: url("../../img/module-2/win-suitcase/suitcase.png");
-  transform: scale(0);
-  transform-origin: bottom;
-}
-.screen--show .result__image .result__image-part_suitcase {
-  animation: suitcaseAppear 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .result__title {
