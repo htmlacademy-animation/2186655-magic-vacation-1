@@ -8,7 +8,7 @@ import result from './modules/result.js';
 import form from './modules/form.js';
 import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
-import pageAnimation from './modules/page-animation';
+import pageAnimation, {slideTextBottom} from './modules/page-animation';
 
 // init modules
 mobileHeight();
@@ -23,3 +23,11 @@ pageAnimation();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
+
+
+slideTextBottom(`.intro__title`, 500, `transform`);
+slideTextBottom(`.intro__date`, 500, `transform`);
+slideTextBottom(`.slider__item-title`, 500, `transform`);
+slideTextBottom(`.prizes__title`, 500, `transform`);
+slideTextBottom(`.rules__title`, 500, `transform`);
+slideTextBottom(`.game__title`, 500, `transform`);

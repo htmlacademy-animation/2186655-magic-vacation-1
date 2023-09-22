@@ -44,7 +44,7 @@
   border: 0;
   border-radius: 3rem;
   outline: none;
-  transition: all 0.5s ease-in;
+  transition: all $duration-extra-long ease-in;
 
   &:focus {
     border: 1px solid $c-purple;
@@ -127,25 +127,50 @@
   }
 }
 
-.form--result {
+.screen--result {
   .form__field {
-    width: calc(100% - 31rem);
+    transition-delay: 0.7s;
 
-    @media (min-width: $stop-scaling) {
-      width: calc(100% - 310px);
+    &::placeholder {
+      opacity: 0;
+      transition: all $duration-medium ease 0.8s;
+    }
+  }
+
+  .form__button {
+    opacity: 0;
+    color: transparent;
+  }
+
+  &.screen--show {
+    .form__field {
+      width: calc(100% - 31rem);
+
+      @media (min-width: $stop-scaling) {
+        width: calc(100% - 310px);
+      }
+
+      @media (orientation: portrait) {
+        width: calc(100% - 5rem);
+      }
+
+      @media (max-width: $tablet) and (orientation: landscape) {
+        width: calc(100% - 9rem);
+      }
+
+      @media (max-width: $mobile) and (orientation: landscape) {
+        width: calc(100% - 5rem);
+      }
+
+      &::placeholder {
+        opacity: 1;
+      }
+
+    }
+    .form__button {
+      animation: buttonFadeIn $duration-medium ease 0.6s forwards;
     }
 
-    @media (orientation: portrait) {
-      width: calc(100% - 5rem);
-    }
-
-    @media (max-width: $tablet) and (orientation: landscape) {
-      width: calc(100% - 9rem);
-    }
-
-    @media (max-width: $mobile) and (orientation: landscape) {
-      width: calc(100% - 5rem);
-    }
   }
 }
 

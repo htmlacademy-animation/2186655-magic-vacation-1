@@ -1,6 +1,10 @@
 @keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes jump {
@@ -29,25 +33,112 @@
 }
 
 @keyframes zoomIn {
-  from {transform: scale(0)}
+  from {
+    transform: scale(0);
+  }
 
-  to {transform: scale(1)}
+  to {
+    transform: scale(1);
+  }
 }
 
 @keyframes fadeInRight {
-  from {transform: translateX(10%); opacity: 0;}
+  from {
+    transform: translateX(10%);
+    opacity: 0;
+  }
 
-  to {transform: translateX(0%); opacity: 1;}
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
 
 }
 
-@keyframes stretchingRight {
-  from {width: 0; visibility: hidden;}
-
-  to {width: 18rem; visibility: visible;}  
+@keyframes textAppear {
+  from {
+    color: transparent;
+  }
+  to {
+    color: $c-dark;
+  }
 }
 
-@keyframes textAppeared{
-  from {color: transparent; visibility: hidden}
-  to {color: $c-dark; visibility: visible}
+@keyframes buttonFadeIn {
+  50% {
+    opacity: 1;
+    color: transparent;
+  }
+
+  to {
+    opacity: 1;
+    color: $c-dark;
+  }
+}
+
+@keyframes suitcaseAppear {
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes flamingoAppear {
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+  }
+}
+
+@keyframes leafBlueLeftAppear {
+  20% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+
+  40% {
+    transform: rotate(-12deg);
+  }
+
+  60% {
+    transform: rotate(0);
+  }
+
+  80% {
+    transform: rotate(-5deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
+
+@keyframes leafBlueRightAppear {
+  20% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+
+  40% {
+    transform: rotate(12deg);
+  }
+
+  60% {
+    transform: rotate(0);
+  }
+
+  80% {
+    transform: rotate(5deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
+
+@keyframes flamingoAnimation {
+  to {
+    transform: translateY(0.8rem) rotate(-6deg);
+  }
 }

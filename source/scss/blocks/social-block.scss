@@ -38,7 +38,7 @@
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
-    transition: all 0.5s cubic-bezier(.6,-0.25,.47,1.71) 0.4s;
+    transition: all $duration-extra-long cubic-bezier(.6,-0.25,.47,1.71) 0.4s;
   }
 
   svg {
