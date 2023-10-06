@@ -272,3 +272,170 @@
     }
   }
 }
+
+@media (min-width: ($mobile + 1)) and (orientation: landscape) {
+  [data-screen="story"][data-slide="1"] {
+    .social-block__toggler {
+      color: $c-purple;
+
+      &:hover,
+      .social-block--active & {
+        color: $c-dark;
+      }
+
+      &:focus {
+        color: $c-dark;
+
+        &::before {
+          border-color: $c-dark;
+        }
+
+      }
+
+      &:active,
+      &:active:focus {
+        color: $c-light;
+
+        &::before {
+          background-color: $c-dark;
+          border-color: $c-dark;
+        }
+      }
+    }
+
+    .social-block__link {
+      &:hover {
+        color: $c-dark;
+      }
+
+      &:focus {
+        color: $c-dark;
+        border-color: $c-dark;
+      }
+
+      &:active,
+      &:active:focus {
+        color: $c-dark;
+      }
+    }
+  }
+
+  [data-screen="story"][data-slide="2"] {
+    .social-block__toggler {
+      color: #3e72ee;
+
+      &:hover,
+      .social-block--active & {
+        color: #90b8e2;
+      }
+
+      &:focus {
+        color: #90b8e2;
+
+        &::before {
+          border-color: #90b8e2;
+        }
+
+      }
+
+      &:active,
+      &:active:focus {
+        color: $c-light;
+
+        &::before {
+          background-color: #90b8e2;
+          border-color: #90b8e2;
+        }
+      }
+    }
+
+    .social-block__link {
+      &:hover {
+        color:  #90b8e2;
+      }
+
+      &:focus {
+        color:  #90b8e2;
+        border-color:  #90b8e2;
+      }
+
+      &:active,
+      &:active:focus {
+        color:  #90b8e2;
+      }
+    }
+  }
+
+  [data-screen="story"][data-slide="3"] {
+    .social-block__toggler {
+      color: #90b8e2;
+
+      &:hover,
+      .social-block--active & {
+        color: #3e72ee;
+      }
+
+      &:focus {
+        color: #3e72ee;
+
+        &::before {
+          border-color: #3e72ee;
+        }
+
+      }
+
+      &:active,
+      &:active:focus {
+        color: $c-light;
+
+        &::before {
+          background-color: #3e72ee;
+          border-color: #3e72ee;
+        }
+      }
+    }
+    .social-block__link {
+      &:hover {
+        color:  #3e72ee;
+      }
+
+      &:focus {
+        color:  #3e72ee;
+        border-color:  #3e72ee;
+      }
+
+      &:active,
+      &:active:focus {
+        color:  #3e72ee;
+      }
+    }
+  }
+
+  [data-screen="story"][data-slide="4"] .social-block__toggler {
+    color: $c-dark;
+
+    &:hover,
+    .social-block--active & {
+      color: $c-purple;
+    }
+
+    &:focus {
+      color: $c-purple;
+
+      &::before {
+        border-color: $c-purple;
+      }
+
+    }
+
+    &:active,
+    &:active:focus {
+      color: $c-light;
+
+      &::before {
+        background-color: $c-purple;
+        border-color: $c-purple;
+      }
+    }
+  }
+}

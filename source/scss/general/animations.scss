@@ -78,7 +78,7 @@
 
 @keyframes suitcaseAppear {
   to {
-    transform: scale(1);
+    transform:translateY(0)  scale(1);
   }
 }
 
@@ -140,5 +140,29 @@
 @keyframes flamingoAnimation {
   to {
     transform: translateY(0.8rem) rotate(-6deg);
+  }
+}
+
+@keyframes rollingOutLeft {
+  from {
+    transform: translateX(-6.28rem) rotate(-180deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0) rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rollingOutRight {
+  from {
+    transform: translateX(6.28rem) rotate(180deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0) rotate(0);
+    opacity: 1;
   }
 }
