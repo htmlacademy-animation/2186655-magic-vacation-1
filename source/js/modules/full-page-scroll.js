@@ -1,4 +1,6 @@
 import throttle from 'lodash/throttle';
+import {Screens} from "./menu";
+import {timer} from "./timer";
 
 export default class FullPageScroll {
   constructor() {
@@ -68,6 +70,10 @@ export default class FullPageScroll {
     if (activeItem) {
       this.menuElements.forEach((item) => item.classList.remove(`active`));
       activeItem.classList.add(`active`);
+    }
+
+    if (this.activeScreen === Screens.GAME) {
+      timer();
     }
   }
 
